@@ -3,20 +3,117 @@
      --primary-light: #ededed;
      --secondary-light: #fefefe;
  }
- 
+
+ body {
+     background-image: url(/images/windows-95-stock-x3-1920x1200.jpeg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: 100% 100%;
+ }
+
+ #input-list {
+    cursor: pointer;
+ }
+
+ #slider.field-row {
+     cursor: pointer;
+ }
+
+ .btn {
+     cursor: pointer;
+ }
+ .box-body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 5rem;
+ }
+
+ fieldset {
+     font-size: 12px;
+ }
+ fieldset label {
+     font-size: 14px;
+     font-weight: bold;
+ }
+
+ fieldset .field-row {
+     margin: 10px;
+ }
+
  .container {
      display: flex;
+     flex-direction: column;
      align-items: center;
      justify-content: center;
-     gap: 100px;
+     gap: 10px;
      max-width: 1100px;
-     margin: 0 auto;
-     }
+     margin: 1rem auto;
+     background:#C0C0C0;
+ }
 
-.grid {
-    display: grid;
-    width: 600px;
-    height: 600px;
-    background-color: var(--secondary-light);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+ .sel-wrapper {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+ }
+
+ .btm-wrap {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-left: 2rem;
+     padding-right: 2rem;
+ }
+
+ input[type="color"] {
+     width: 100%;
+     height: 50px;
+     
+     
+ }
+
+ .options {
+     display: flex;
+     flex-direction: column;
+     justify-content: stretch;
+     align-items: stretch;
+     row-gap: 1rem;
+     padding: 1rem;
+     background-color: rgba(51, 51, 51, 0.109);
+
+ }
+
+ .color-wrap {
+     text-align: center;
+ }
+
+ .slider-wrap {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding-top: 12px;
+     padding-bottom: 2px;
+ }
+
+ .grid {
+     display: grid;
+     width: 500px;
+     height: 500px;
+     background-color: var(--secondary-light);
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     border-width:4px;
+     border-color:#FFFFFF #808080 #808080 #FFFFFF;
+     border-style:solid;
+     cursor: pointer;
+
+ }
+ .colorSelect {
+     cursor: pointer;
+ }
+
+ .grid div {
+     outline: 1px solid var(--primary-light);
+ }
