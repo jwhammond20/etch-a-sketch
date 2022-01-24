@@ -1,7 +1,8 @@
 const grid = document.querySelector(".grid");
 const dropDown = document.getElementById('input-list')
 const checkbox = document.getElementById("gridlines")
-
+const backGround = document.querySelectorAll('.grid');
+let currentState = false;
 
 // Make grid
 function setupGrid(size) {
@@ -10,9 +11,26 @@ function setupGrid(size) {
 
     for (let i = 0; i < size * size; i++) {
         const gridElement = document.createElement('divGrid');
+        gridElement.classList.add("cell");
         grid.appendChild(gridElement);
-        gridElement.addEventListener('mouseover', changeColor)
+        gridElement.addEventListener('click', toggleClick)
     }
+}
+
+function toggleClick() {
+  const cells = document.querySelectorAll("divGrid");
+
+  if (!currentState) {
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseleave", changeColor);
+    });
+    currentState = true;
+  } else {
+    cells.forEach((cell) => {
+      cell.removeEventListener("mouseleave", changeColor);
+    });
+    currentState = false;
+  }
 }
 
 //grid size adjustment than clears
@@ -42,6 +60,7 @@ function clearGrid() {
         elements[i].style.backgroundColor = "";
     }
     resetGridLines();
+
 }
 
 function changeBackground() {
