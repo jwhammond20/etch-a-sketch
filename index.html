@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
-<body onload="setupGrid(16);">
+<body onload="setupGrid(16)">
     <div class="box-body">
         <div class="window" style="width: 550px">
             <div class="title-bar">
@@ -25,7 +25,8 @@
                 <fieldset style="width: 500px;">
                     <legend>Choose Color Option</legend>
                     <select  id="input-list" style="width: 100%;">
-                        <option class="colorOptions" value="solidColor" selected>Solid-Color</option>
+                        <option class="colorOptions" selected>Select Option</option>
+                        <option class="colorOptions" value="solidColor">Solid-Color</option>
                         <option class="colorOptions" value="ranColor">Rainbow</option>
                         <option class="colorOptions" value="eraser">Eraser</option>
                     </select>
@@ -34,24 +35,31 @@
                     <fieldset style="width: 225px;">
                         <legend>Color Selection</legend>
                         <div class="color-wrap">
-                            <input type="color"  class="colorSelect">
+                            <input type="color" value="#ff6600" class="colorSelect">
                         </div>
                     </fieldset>
                     <fieldset style="width: 225px;">
                         <legend>Select Grid Size</legend>
                         <div class="slider-wrap">
                             <input id="slider" type="range" class="field-row" min="16" max="64" step="4" value="16"
-                                oninput="sliderChange(this.value)">
+                                onchange="sliderChange(this.value)">
                             <label for="range22" id="output">16 x 16</label>
                         </div>
                     </fieldset>
                 </div>
                 <div class="btm-wrap">
                     <div class="field-row">
-                        <input checked disabled type="checkbox" id="example4">
-                        <label for="example4">Only click this button to reset your system</label>
+                        <input type="checkbox" checked="false" id="gridlines">
+                        <label for="gridlines">Show Grid Lines</label>
                     </div>
+                    <div class="btn-wrap">
+                        <div class="left-btn">
+                    <button id="back-btn" class="btn">Change Background Color</button>
+                    </div>
+                    <div class="right-btn">
                     <button id="clear-btn" class="btn">Clear Grid</button>
+                    </div>
+                    </div>
                 </div>
                 <ul class="tree-view">
                     <li>thanks for checking out my project</li>
