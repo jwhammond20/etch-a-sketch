@@ -2,7 +2,7 @@ const grid = document.querySelector(".grid");
 const dropDown = document.getElementById('input-list')
 const checkbox = document.getElementById("gridlines")
 const backGround = document.querySelectorAll('.grid');
-let currentState = false;
+let currentState = true;
 
 // Make grid
 function setupGrid(size) {
